@@ -11,7 +11,7 @@ from django.conf import settings
 def recipe_image_file_path(instance, filename):
     """generate file path for new recipe image"""
     # this is to strip the last part of filename to get
-    #file type example jpg, png
+    # file type example jpg, png
     ext = filename.split('.')[-1]
     # create filename with unique id and extension appended
     filename = f'{uuid.uuid4()}.{ext}'
